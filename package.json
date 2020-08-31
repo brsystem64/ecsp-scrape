@@ -1,0 +1,28 @@
+{
+  "name": "csp-api",
+  "version": "1.0.0",
+  "description": "core-csp",
+  "main": "csp.js",
+  "scripts": {
+    "start": "node ./src/csp",
+    "test": "node_modules/mocha/bin/mocha",
+    "dev": "clear; nodemon ./src/csp"
+  },
+  "keywords": [
+    "api"
+  ],
+  "author": "bruno bastos",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "mariadb": "^2.4.2",
+    "puppeteer": "^5.2.1",
+    "sequelize": "^6.3.4"
+  },
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "mocha": "^8.1.2",
+    "nodemon": "^2.0.4",
+    "sequelize-cli": "^6.2.0"
+  }
+}

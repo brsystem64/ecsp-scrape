@@ -1,0 +1,23 @@
+{
+    "crawler":{
+    "link":"https://www.ssp.sp.gov.br/estatistica/pesquisa.aspx",
+    "headless": true,
+    "tabelaRaspagem": "conteudo_repAnos_gridDados_0",
+    "timeout": 0
+    },
+    "filtros":{
+        "anos": "conteudo_ddlAnos",
+        "regioes": "conteudo_ddlRegioes",
+        "municipios": "conteudo_ddlMunicipios",
+        "delegacias": "conteudo_ddlDelegacias"
+    },
+    "conteudos":{
+        "ocorrenciasMensal": "conteudo_btnMensal",
+        "produtividadePolicial": "conteudo_btnPolicial"
+    },
+    "invoke": {
+        "ocorrenciasMensal":"ocorrenciaService"
+    }
+
+
+}
