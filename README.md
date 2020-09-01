@@ -1,5 +1,5 @@
-# csp-core
-CSP faz raspagem de dados no site da policia do estado de São Paulo, utilizando tecnicas
+# ecsp-core
+ECSP faz raspagem de dados no site da policia do estado de São Paulo, utilizando tecnicas
 de web scraping, formata os dados e salva na base de dados.
 
 OBS: O projeto serve apenas para fins de aprendizagem.
@@ -41,7 +41,7 @@ Algumas regras nos parametros devem ser avaliadas:
 
 
 ## Como funciona?
-O CSP é dividido em 4 partes.
+O ECSP é dividido em 4 partes.
 
 ### 1. Validação
 Quando o CSP é iniciado, é necessário que sejam passado três argumentos referentes a busca.
