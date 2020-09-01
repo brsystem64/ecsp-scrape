@@ -1,5 +1,5 @@
 const puppeteer = require("puppeteer");
-const {isCitiesEquals} = require("./helper/regex");
+const {isCitiesEquals} = require("./../helpers/regex");
 
 class Scrape{
     constructor(props){

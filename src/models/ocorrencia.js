@@ -1,11 +1,12 @@
 
-const {Model, DataTypes } = require('sequelize');
+const {Model} = require("sequelize");
 
 module.exports = (sequelize, DataTypes) => {
     class Ocorrencia extends Model {
-      static associate(models) {
+      static associate() {
       }
-    };
+    }
+
     Ocorrencia.init({
         id:{
             type: DataTypes.INTEGER,
@@ -14,8 +15,8 @@ module.exports = (sequelize, DataTypes) => {
         natureza: DataTypes.STRING
     },{
       sequelize,
-      tableName: 'tb_ocorrencia',
-      modelName: 'Ocorrencia',
+      tableName: "tb_ocorrencia",
+      modelName: "Ocorrencia",
       createdAt: false,
       updatedAt: false
     });

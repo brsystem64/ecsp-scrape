@@ -1,11 +1,11 @@
 
 
 
-function get(serviceName){
-    return require('./'+serviceName);
+function build(serviceName){
+    return require("./"+serviceName);
 }
 
 
 module.exports = {
-    get
-}
+    build
+};

@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node ./src/csp",
     "test": "node_modules/mocha/bin/mocha",
-    "dev": "clear; nodemon ./src/csp"
+    "dev": "clear; nodemon ./src/csp",
+    "eslint": "node_modules/.bin/eslint src"
   },
   "keywords": [
     "api"

@@ -1,9 +1,9 @@
 {
     "crawler":{
-    "link":"https://www.ssp.sp.gov.br/estatistica/pesquisa.aspx",
-    "headless": true,
-    "tabelaRaspagem": "conteudo_repAnos_gridDados_0",
-    "timeout": 0
+        "link":"https://www.ssp.sp.gov.br/estatistica/pesquisa.aspx",
+        "headless": true,
+        "tabelaRaspagem": "conteudo_repAnos_gridDados_0",
+        "timeout": 0
     },
     "filtros":{
         "anos": "conteudo_ddlAnos",

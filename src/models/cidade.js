@@ -1,11 +1,12 @@
 
-const {Model, DataTypes } = require('sequelize');
+const {Model} = require("sequelize");
 
 module.exports = (sequelize, DataTypes) => {
     class Cidade extends Model {
-      static associate(models) {
+      static associate() {
       }
-    };
+    }
+
     Cidade.init({
         id:{
             type: DataTypes.INTEGER,
@@ -14,8 +15,8 @@ module.exports = (sequelize, DataTypes) => {
         nome: DataTypes.STRING
     },{
       sequelize,
-      tableName: 'tb_cidade',
-      modelName: 'Cidade',
+      tableName: "tb_cidade",
+      modelName: "Cidade",
       createdAt: false,
       updatedAt: false
     });
