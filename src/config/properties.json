@@ -12,11 +12,11 @@
         "delegacias": "conteudo_ddlDelegacias"
     },
     "conteudos":{
-        "ocorrenciasMensal": "conteudo_btnMensal",
-        "produtividadePolicial": "conteudo_btnPolicial"
+        "ocorrencias": "conteudo_btnMensal",
+        "produtividade": "conteudo_btnPolicial"
     },
     "invoke": {
-        "ocorrenciasMensal":"ocorrenciaService"
+        "ocorrencias":"ocorrenciaService"
     }
 
 

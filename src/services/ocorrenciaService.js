@@ -26,7 +26,6 @@ function saveAll(data){
                 }
                 return models.OcorrenciaCidade.create(row);
             }
-
         )
     });
 }
@@ -35,7 +34,8 @@ function findCityByName(value){
     return models.Cidade.findOne({
         where: {
             nome: value
-        }});
+        }
+    });
 }
 
 

@@ -1,5 +1,5 @@
 const puppeteer = require("puppeteer");
-const {isCitiesEquals} = require("./../helpers/regex");
+const {isCitiesEquals} = require("../helpers/regex");
 
 class Scrape{
     constructor(props){
@@ -20,13 +20,13 @@ class Scrape{
 
     async run({city, year , content}){
         await this.setup();
-        await this.selectCity(city);
+        this.selectCity(city);
         await this.page.waitForNavigation();
-        await this.selectContent(content);
+        this.selectContent(content);
         await this.page.waitForNavigation();
-        await this.selectYear(year);
+        this.selectYear(year);
         await this.page.waitForNavigation();
-        return await this.selectdata();
+        return this.selectdata();
     }
 
     async selectCity(city){
@@ -35,7 +35,6 @@ class Scrape{
         let data = await this.page.evaluate(async (query, city) =>{
             let datas = document.querySelectorAll(query);
             let findCity;
-
             for(let i = 1; i < datas.length; i++){
                 if(await isCitiesEquals(city, datas[i].innerText)){
                     findCity = datas[i].value;
@@ -45,7 +44,7 @@ class Scrape{
             return findCity;
         }, query, city);
 
-        await this.page.select(`#${this.props["filtros"]["municipios"]}`,data);
+        return this.page.select(`#${this.props["filtros"]["municipios"]}`,data);
     }
     
     async selectContent(content){
@@ -57,15 +56,11 @@ class Scrape{
     }
 
     async selectYear(year){
-        if(year < 2001 || year > new Date().getFullYear()){
-            console.log("error");
-        }
-        await this.page.select(`#${this.props["filtros"]["anos"]}`,year);
+        return this.page.select(`#${this.props["filtros"]["anos"]}`,year);
     }
 
     async selectdata(){
         let query = `#${this.props["crawler"]["tabelaRaspagem"]} > tbody > tr`;
-
         return  this.page.$$eval(query, rows => {
                 return Array.from(rows, row => {
                   const columns = row.querySelectorAll("td");
